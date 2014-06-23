@@ -10,4 +10,10 @@ class StaticController < ApplicationController
 
   def birth
   end
+
+  def birth2
+  end
+
+  def about
+  end
 end

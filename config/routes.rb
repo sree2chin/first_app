@@ -9,6 +9,8 @@ FirstApp::Application.routes.draw do
 
   get "static/birth2"
 
+  get "static/about"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
