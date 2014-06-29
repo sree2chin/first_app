@@ -1,10 +1,14 @@
 FirstApp::Application.routes.draw do
+  
+
   root :to => 'static#home'
+
+  match '/signup', to: 'users#new'
+
   match '/help', to: 'static#help'
   match '/about', to: 'static#about'
 
   get "static/home"
-
  
   get "static/pages"
 

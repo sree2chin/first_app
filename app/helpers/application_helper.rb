@@ -1,7 +1,7 @@
 module ApplicationHelper
 
 	def full_title(page_title)
-		base_title = 'ROR sample app'
+		base_title = 'Super Chefs'
 		if page_title.empty?
 			base_title
 		else
