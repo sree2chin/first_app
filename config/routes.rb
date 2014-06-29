@@ -1,6 +1,6 @@
 FirstApp::Application.routes.draw do
   
-
+  resources :users
   root :to => 'static#home'
 
   match '/signup', to: 'users#new'
