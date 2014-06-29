@@ -2,20 +2,24 @@ require 'spec_helper'
 
 describe "StaticPages" do
   describe "home page" do
-
+    before {    visit root_path  }
     it "should have the content 'sample app'" do
-
-      visit '/static/home'
-      page.should have_selector('h1', :text => 'sample app')
+    page.should have_selector('h1', :text => "Chinna's")
 
      end
 
-     it "should have the right title" do
+     it "should have the base_title" do
 
-      visit '/static/home'
-      page.should have_selector('title', :text => 'ROR sample app | home')
+      page.should have_selector('title', :text => 'ROR sample app')
 
      end
+
+     it "should have the not have page_title" do
+      visit root_path
+      page.should_not have_selector('title', :text => 'home')
+
+     end
+
 
   end    
 
@@ -23,14 +27,14 @@ describe "StaticPages" do
 
     it "should have the content 'help'" do
 
-      visit '/static/help'
+      visit help_path
       page.should have_selector('h1', :text => 'help')
 
      end
 
      it "should have the right title" do
 
-      visit '/static/help'
+      visit help_path
       page.should have_selector('title', :text => 'ROR sample app | help')
 
      end
@@ -41,14 +45,14 @@ describe "StaticPages" do
 
     it "should have the content 'about'" do
 
-      visit '/static/about'
+      visit about_path
       page.should have_content('about')
 
      end
 
      it "should have the right title" do
 
-      visit '/static/about'
+      visit about_path
       page.should have_selector('title', :text => 'ROR sample app | about')
 
      end

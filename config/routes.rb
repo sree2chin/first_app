@@ -1,15 +1,16 @@
 FirstApp::Application.routes.draw do
+  root :to => 'static#home'
+  match '/help', to: 'static#help'
+  match '/about', to: 'static#about'
+
   get "static/home"
 
-  get "static/help"
-
-  get "static/birth"
-
+ 
   get "static/pages"
 
   get "static/birth2"
 
-  get "static/about"
+  get "static/birth"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
