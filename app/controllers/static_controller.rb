@@ -16,4 +16,7 @@ class StaticController < ApplicationController
 
   def about
   end
+
+  def kitchen
+  end
 end

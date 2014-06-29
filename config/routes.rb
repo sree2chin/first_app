@@ -7,6 +7,9 @@ FirstApp::Application.routes.draw do
 
   match '/help', to: 'static#help'
   match '/about', to: 'static#about'
+  match '/kitchen', to: 'static#kitchen'
+  match '/chefs', to: 'static#chefs'
+  match '/nutrition', to: 'static#nutrition'
 
   get "static/home"
  
