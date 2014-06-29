@@ -27,9 +27,6 @@ describe "StaticPages" do
 
   end   
 
-  it "should have the right links on the layout" do
-    click_link "Sign up now!"
-    page.should have_selector 'title', text: full_title('Sign up')
-  end
+  
 
 end
